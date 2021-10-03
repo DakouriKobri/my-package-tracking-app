@@ -18,6 +18,7 @@ export default function ListScreen({ items, setModal }) {
         onClick={() => setListDisplayed(!listDisplayed)}
       />
       {listDisplayed && <List items={items} setModal={setModal} />}
+      {/* This part is hard to read because is a if that renders a lot of content, and that content was not even neccesary in the first place */}
       {!listDisplayed && (
         <div className="welcome-view">
           {/* CSS scoping, you can called this just message and inside CSS you can say .welcome-view .message to access the info */}

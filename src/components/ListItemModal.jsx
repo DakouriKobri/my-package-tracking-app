@@ -15,7 +15,7 @@ export default function ListItemModal({ item }) {
     location_coordinate_latitude,
     location_status_ok,
     notes,
-  } = item; // why import everything if is not relevant for theend user.
+  } = item; // why import everything if is not relevant for theend user? When prettier puts it in a vertical line is a sign that something is wrong -1
 
   return (
     <div className="list-item-modal__container">
