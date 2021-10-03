@@ -12,8 +12,8 @@ export default function App() {
   const API_URL = `https://my.api.mockaroo.com/insta-orders.json?key=e49e6840`;
 
   const [items, setitems] = useState([]);
-  const [fetchError, setFetchError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [fetchError, setFetchError] = useState(null); // this can be acomplished with just 1 variable
+  const [isLoading, setIsLoading] = useState(true); // this can be acomplished with just 1 variable
   const [modal, setModal] = useState(null);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ export default function App() {
       try {
         const response = await fetch(API_URL);
         if (!response.ok) throw Error("Couldn't get any data");
+        
         const itemData = await response.json();
         setitems(itemData);
         setFetchError(null);

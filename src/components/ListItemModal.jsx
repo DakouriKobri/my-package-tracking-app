@@ -1,3 +1,4 @@
+// this component is too long (50+ lines) having a vertical list of kets in the const item is a sign that you did not need all or need to refactor
 export default function ListItemModal({ item }) {
   const {
     parcel_id,
@@ -14,13 +15,14 @@ export default function ListItemModal({ item }) {
     location_coordinate_latitude,
     location_status_ok,
     notes,
-  } = item;
+  } = item; // why import everything if is not relevant for theend user.
 
   return (
     <div className="list-item-modal__container">
       <div className="list-item-modal">
         <h3 className="item__parcel__id">{parcel_id} </h3>
         <p>
+          {/* why the span, if there is no attempt to make it look visually distinct using CSS? */}
           <span>to: </span> {user_name}
         </p>
         <p>
@@ -30,6 +32,7 @@ export default function ListItemModal({ item }) {
           <span>From:</span> {sender}
         </p>
         <p>{status}</p>
+        {/* cool use of ternary operator to show different messages */}
         <p>{verification_required ? "ID required" : "No ID required"}</p>
         <p>
           <span>ETA:</span> {new Date(`${eta}`).toUTCString()}

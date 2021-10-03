@@ -1,5 +1,6 @@
 import logo from "../assets/images/logo.png";
 
+// good
 export default function Header() {
   return (
     <header>

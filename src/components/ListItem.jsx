@@ -1,6 +1,7 @@
 export default function ListItem({ item, onClick }) {
   const { parcel_id, sender, status, last_updated } = item;
   return (
+    // why there is a div inside a li each one with CSS classes attached to it. This make your CSS harder to code
     <li className="list-item-container">
       <div className="list-item">
         <div className="item-short-info">
