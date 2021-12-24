@@ -1,4 +1,12 @@
 .list-item-modal {
   width: 340px;
   padding: 10px;
+
+  .sender {
+    margin-bottom: $medium;
+    padding-bottom: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-text;
+  }
 }

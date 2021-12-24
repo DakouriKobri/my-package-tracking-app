@@ -1,59 +1,21 @@
+// Project Files
 import Map from "./map/Map";
+import ParcelInfo from "./ParcelInfo";
+import Recipient from "./Recipient";
 
 export default function ListItemModal({ parcel }) {
-  const {
-    parcel_id,
-    sender,
-    status,
-    last_updated,
-    eta,
-    user_name,
-    user_phone,
-    verification_required,
-    location_id,
-    location_name,
-    location_coordinate_longitude,
-    location_coordinate_latitude,
-    location_status_ok,
-    notes,
-  } = parcel;
+  const { sender, location_name } = parcel;
 
   return (
     <div className="list-item-modal__container">
       <div className="list-item-modal">
-        <h3 className="item__parcel__id">{parcel_id} </h3>
+        <p className="sender">{sender}</p>
+        <Recipient parcel={parcel} />
+        <ParcelInfo parcel={parcel} />
         <p>
-          <span>to: </span> {user_name}
-        </p>
-        <p>
-          <span>Phone number: </span> {user_phone}
-        </p>
-        <p>
-          <span>From:</span> {sender}
-        </p>
-        <p>{status}</p>
-        <p>{verification_required ? "ID required" : "No ID required"}</p>
-        <p>
-          <span>ETA:</span> {new Date(`${eta}`).toUTCString()}
-        </p>
-        {notes && (
-          <p>
-            <span>Note:</span> {notes}
-          </p>
-        )}
-        <p>
-          <span>Last updated:</span> {new Date(`${last_updated}`).toUTCString()}
-        </p>
-        <p>
-          <span>Pick up at:</span> {location_name}
+          <strong>Pickup location:</strong> {location_name}
         </p>
         <Map parcel={parcel} />
-        {/* <p>
-          <span>Location ID:</span> {location_id}
-        </p> */}
-        {/* <p>{location_coordinate_latitude}</p>
-        <p>{location_coordinate_longitude}</p>
-        <p>{location_status_ok}</p> */}
       </div>
     </div>
   );
