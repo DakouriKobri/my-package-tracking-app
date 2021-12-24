@@ -10,8 +10,12 @@ export default function Modal({ state }) {
     <>
       <div className="modal-background" />
       <div className="modal-window">
+        <div className="btn-container">
+          <button className="btn-close" onClick={() => setChild(null)}>
+            &times;
+          </button>
+        </div>
         {child}
-        <button onClick={() => setChild(null)}>Close</button>
       </div>
     </>,
     document.getElementById("portal")

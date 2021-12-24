@@ -15,6 +15,11 @@
     height: 25px;
     border-radius: 8px;
     border: solid 1px $color-primary;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.85;
+    }
   }
 
   hr {

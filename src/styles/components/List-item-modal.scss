@@ -1,6 +1,8 @@
 .list-item-modal {
-  width: 340px;
-  padding: 10px;
+  &__container {
+    width: 340px;
+    padding: 0 10px 10px;
+  }
 
   .sender {
     margin-bottom: $medium;

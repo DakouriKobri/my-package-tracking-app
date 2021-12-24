@@ -11,6 +11,11 @@
     color: $color-button-text;
     border: solid 1px $color-primary;
     border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.85;
+    }
     span {
       padding: 10px;
     }

@@ -7,8 +7,8 @@ export default function ListItemModal({ parcel }) {
   const { sender, location_name } = parcel;
 
   return (
-    <div className="list-item-modal__container">
-      <div className="list-item-modal">
+    <div className="list-item-modal">
+      <div className="list-item-modal__container">
         <p className="sender">{sender}</p>
         <Recipient parcel={parcel} />
         <ParcelInfo parcel={parcel} />
