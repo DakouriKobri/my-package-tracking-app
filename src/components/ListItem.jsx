@@ -1,5 +1,5 @@
-export default function ListItem({ item, onClick }) {
-  const { parcel_id, sender, status, last_updated } = item;
+export default function ListItem({ parcel, onClick }) {
+  const { parcel_id, sender, status, last_updated } = parcel;
   return (
     <li className="list-item-container">
       <div className="list-item">

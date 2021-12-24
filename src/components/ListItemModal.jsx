@@ -1,4 +1,4 @@
-export default function ListItemModal({ item }) {
+export default function ListItemModal({ parcel }) {
   const {
     parcel_id,
     sender,
@@ -14,7 +14,7 @@ export default function ListItemModal({ item }) {
     location_coordinate_latitude,
     location_status_ok,
     notes,
-  } = item;
+  } = parcel;
 
   return (
     <div className="list-item-modal__container">
@@ -34,14 +34,16 @@ export default function ListItemModal({ item }) {
         <p>
           <span>ETA:</span> {new Date(`${eta}`).toUTCString()}
         </p>
-        <p>
-          <span>Note:</span> {notes}
-        </p>
+        {notes && (
+          <p>
+            <span>Note:</span> {notes}
+          </p>
+        )}
         <p>
           <span>Last updated:</span> {new Date(`${last_updated}`).toUTCString()}
         </p>
         <p>
-          <span>Location:</span> {location_name}
+          <span>Pick up at:</span> {location_name}
         </p>
         <p>
           <span>Location ID:</span> {location_id}
