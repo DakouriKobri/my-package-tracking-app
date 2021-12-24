@@ -1,0 +1,11 @@
+.map {
+  width: 100%;
+  height: 20vh;
+}
+.map-marker {
+  color: red;
+  font-size: 2rem;
+  .location-name {
+    font-size: 1rem;
+  }
+}

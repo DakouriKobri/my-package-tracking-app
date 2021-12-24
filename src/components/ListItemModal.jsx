@@ -1,3 +1,5 @@
+import Map from "./map/Map";
+
 export default function ListItemModal({ parcel }) {
   const {
     parcel_id,
@@ -45,12 +47,13 @@ export default function ListItemModal({ parcel }) {
         <p>
           <span>Pick up at:</span> {location_name}
         </p>
-        <p>
+        <Map parcel={parcel} />
+        {/* <p>
           <span>Location ID:</span> {location_id}
-        </p>
-        <p>{location_coordinate_latitude}</p>
+        </p> */}
+        {/* <p>{location_coordinate_latitude}</p>
         <p>{location_coordinate_longitude}</p>
-        <p>{location_status_ok}</p>
+        <p>{location_status_ok}</p> */}
       </div>
     </div>
   );

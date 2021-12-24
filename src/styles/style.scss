@@ -3,13 +3,14 @@
 @import "./base/typography";
 
 // Components
-@import "./components/Header";
 @import "./components/ButtonToggle";
+@import "./components/Footer";
+@import "./components/Header";
 @import "./components/List";
 @import "./components/ListItem";
-@import "./components/Footer";
-@import "./components/Modal";
 @import "./components/List-item-modal";
+@import "./components/Map";
+@import "./components/Modal";
 
 // Page
 @import "./page/Home";
