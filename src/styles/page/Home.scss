@@ -1,18 +1,19 @@
 @import "../base/variables";
 
 .home {
-  margin: 12px 5px;
-  margin-top: 90px;
+  margin-top: 120px;
+  margin-bottom: 30px;
   background-color: $color-secondary;
+  overflow: hidden;
 
   .welcome-view {
-    @media (min-width: 600px) {
-      width: 600px;
-      margin: 12px auto;
-    }
-
-    .welcome-view__message {
+    &__message {
+      margin: 30px auto;
       color: $color-text;
+    }
+    &__image-container {
+      width: 80%;
+      margin: 55px auto;
     }
   }
 }

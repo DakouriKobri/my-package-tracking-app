@@ -11,12 +11,14 @@ export default function Home() {
 
   return (
     <div className="home">
-      <ButtonToggle
-        status={listDisplayed}
-        onClick={() => setListDisplayed(!listDisplayed)}
-      />
-      {listDisplayed && <List />}
-      {!listDisplayed && <WelcomeView />}
+      <div className="container">
+        <ButtonToggle
+          status={listDisplayed}
+          onClick={() => setListDisplayed(!listDisplayed)}
+        />
+        {listDisplayed && <List />}
+        {!listDisplayed && <WelcomeView />}
+      </div>
     </div>
   );
 }

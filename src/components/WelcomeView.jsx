@@ -1,4 +1,4 @@
-import postman from "../assets/images/postman.jpg";
+import postman from "../assets/images/postman.png";
 
 export default function WelcomeView() {
   return (
@@ -7,7 +7,9 @@ export default function WelcomeView() {
         Welcome to your package tracker! Click the button above to start
         tracking your orders!
       </p>
-      <img src={postman} alt="A ppstman holding a parcel and waving" />
+      <div className="welcome-view__image-container">
+        <img src={postman} alt="A ppstman holding a parcel and waving" />
+      </div>
     </div>
   );
 }
