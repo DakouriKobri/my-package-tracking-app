@@ -8,6 +8,10 @@ header {
 
   .logo {
     width: 60px;
-    margin: 10px auto;
+    margin: 5px auto;
+
+    @media (min-width: 600px) {
+      width: 70px;
+    }
   }
 }
