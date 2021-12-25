@@ -3,9 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <footer>
-      <p className="copyright">
-        &copy; {new Date().getFullYear()} {"\u2022"} Dakouri M. Kobri
-      </p>
+      <p className="copyright">&copy; 2021 {"\u2022"} My Package Tracker</p>
     </footer>
   );
 }

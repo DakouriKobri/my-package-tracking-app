@@ -1,13 +1,14 @@
 @import "./variables";
 
-* {
+*,
+*::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
 }
 
 img {
@@ -17,25 +18,26 @@ img {
 
 .App {
   font-family: "Roboto", "Oxygen", sans-serif;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  background-color: red;
+}
+// .container {
+//   display: flex;
+//   flex-direction: column;
+// }
+.loading-message {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  color: $color-text;
+  font-size: medium;
+}
 
-  .loading-message {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
-    color: $color-text;
-    font-size: medium;
-  }
-
-  .error-message {
-    color: red;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
-    font-size: medium;
-  }
+.error-message {
+  color: red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  font-size: medium;
 }
